@@ -1,0 +1,13 @@
+.bg_blue{
+    background: #0c2c53;
+}
+
+.header .top-strip{
+    padding: 8px 0px;
+}
+
+.header .top-strip p{
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+}
