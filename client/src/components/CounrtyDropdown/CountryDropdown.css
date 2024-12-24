@@ -1,0 +1,33 @@
+.country_drop_down{
+    width: 180px;
+    height: 60px;
+    min-width: 150px;
+    text-align: left;
+    justify-content: flex-start;
+    border: 1px solid rgba(0,0,0,0.2) !important;
+    border-radius: 2px;
+    padding: 10px 10px !important;
+}
+
+.country_drop_down .label{
+    font-size: 12px;
+    text-transform: capitalize;
+    color: rgba(0,0,0,0.4) !important;
+    /* line-height: 16px; */
+}
+
+.country_drop_down .cname{
+    font-size: 14px;
+    text-transform: capitalize;
+    color: #0c2c53;
+    font-weight: 700;
+    /* line-height: 16px; */
+}
+
+.country_drop_down .angle{
+    color: #0c2c53;
+}
+
+.country_drop_down span.ml-auto svg{
+    opacity: 0.7;
+}

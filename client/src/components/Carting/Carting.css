@@ -1,0 +1,39 @@
+.carting .profile{
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba(0,0,0,0.1) !important;
+    color: black;
+}
+
+.carting .profile svg{
+    font-size: 22px;
+}
+
+.cartTab button{
+    background: #fff1ee;
+}
+
+.cartTab .price{
+    font-size: 18px;
+    color: rgba(0,0,0,0.8);
+    font-weight: 700;
+}
+
+.cartTab button svg{
+    color: #ea2b0f;
+}
+
+.cartTab .count{
+    position: absolute;
+    top: -6px;
+    right: -4px;
+    background: #ea2b0f;
+    border-radius: 50%;
+    color: white;
+    width: 20px;
+    height: 20px;
+}

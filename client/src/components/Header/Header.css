@@ -2,12 +2,22 @@
     background: #0c2c53;
 }
 
-.header .top-strip{
+.header_wrapper .top-strip{
     padding: 8px 0px;
 }
 
-.header .top-strip p{
+.header_wrapper .top-strip p{
     color: white;
     font-size: 12px;
     font-weight: 500;
+}
+
+.header_wrapper .header{
+    width: 100%;
+    height: auto;
+    padding: 15px 0px;
+}
+
+.logoWrapper img{
+    width: 50%;
 }
