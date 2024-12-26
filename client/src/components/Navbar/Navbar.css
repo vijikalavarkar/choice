@@ -1,0 +1,28 @@
+nav .allCatTab{
+    background: #0c2c53;
+    padding: 12px 35px;
+    color: white;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+
+nav .allCatTab:hover{
+    background: #164376;
+    color: white;
+}
+
+
+nav .allCatTab .Cat_text{
+    font-weight: 600;
+    
+}
+
+
+nav .allCatTab .Cat_menu svg{
+    font-size: 20px;
+}
+
+nav .allCatTab .Cat_angle svg{
+    font-size: 18px;
+}

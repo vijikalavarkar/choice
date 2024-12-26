@@ -4,6 +4,7 @@ import Logo from '../../assets/images/choice.png'
 import CountryDropdown from '../CounrtyDropdown/CountryDropdown'
 import Searchbar from '../Searchbar/Searchbar'
 import Carting from '../Carting/Carting'
+import Navbar from '../Navbar/Navbar'
 
 
 const Header = () => {
@@ -36,6 +37,12 @@ const Header = () => {
 
 
             </header>
+
+
+            {/* Navbar section */}
+            <Navbar />
+
+
         </>
     )
 }
