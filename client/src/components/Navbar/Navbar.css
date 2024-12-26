@@ -1,9 +1,10 @@
 nav .allCatTab{
     background: #0c2c53;
-    padding: 12px 35px;
+    padding: 12px 26px;
     color: white;
     border-radius: 5px;
     margin-top: 10px;
+    letter-spacing: 2px;
 }
 
 
@@ -25,4 +26,27 @@ nav .allCatTab .Cat_menu svg{
 
 nav .allCatTab .Cat_angle svg{
     font-size: 18px;
+}
+
+/* Navbar 2 css */
+nav .navpart2 ul{
+    margin-bottom: 0px;
+    margin-top: 6px;
+}
+
+nav .navpart2 ul li a{
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    color: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    padding: 12px 52px;
+    transition: all 0.2s ease-in-out;
+    border-radius: 3px;
+}
+
+nav .navpart2 ul li a:hover{
+    background-color: #0c2c53;
+    color: white;
 }
