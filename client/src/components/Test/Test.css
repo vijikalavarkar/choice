@@ -1,0 +1,21 @@
+.simple-parant{
+    width: 400px;
+    height: 400px;
+    background: gray;
+    
+}
+
+.buttonopen{
+    background: red;
+}
+
+.main_paranet{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_paranet p{
+    margin-bottom: 0px;
+    padding: 10px 60px;
+}

@@ -7,6 +7,7 @@ import Carting from '../Carting/Carting'
 import Navbar from '../Navbar/Navbar'
 
 
+
 const Header = () => {
     return(
         <>
@@ -42,6 +43,7 @@ const Header = () => {
             {/* Navbar section */}
             <Navbar />
 
+            
 
         </>
     )

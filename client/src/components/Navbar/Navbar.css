@@ -34,19 +34,34 @@ nav .navpart2 ul{
     margin-top: 6px;
 }
 
-nav .navpart2 ul li a{
+nav .navpart2 ul li a button{
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
     text-decoration: none;
     color: rgba(0,0,0,0.7);
     display: flex;
     align-items: center;
-    padding: 12px 52px;
+    padding: 12px 45px;
     transition: all 0.2s ease-in-out;
     border-radius: 3px;
 }
 
-nav .navpart2 ul li a:hover{
+nav .navpart2 ul li a button:hover{
     background-color: #0c2c53;
     color: white;
+}
+
+nav .navpart2 ul li a{
+    text-decoration: none;
+}
+
+
+nav .navpart1{
+    max-width: 20%;
+    flex: 0 0 20%;
+}
+
+nav .navpart2{
+    max-width: 80%;
+    flex: 0 0 80%;
 }
