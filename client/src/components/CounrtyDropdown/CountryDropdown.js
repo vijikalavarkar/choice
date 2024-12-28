@@ -1,10 +1,11 @@
 import Button from '@mui/material/Button';
 import "./CountryDropdown.css";
 import { FaAngleDown } from "react-icons/fa";
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { MdClose } from "react-icons/md";
 import Dialog from '@mui/material/Dialog';
 import { IoSearch } from "react-icons/io5";
+import { MyContext } from '../../App';
 
 
 const CountryDropdown = () => {
@@ -13,6 +14,16 @@ const CountryDropdown = () => {
 
     // country state
     const [isOpenModel, setIsOpenModel] = useState(false)
+
+    // to know which contry selected
+    const [selectedTab, setSelectedTab] = useState(null)
+
+    const context = useContext(MyContext)
+
+    const selectedCountry = (index) => {
+        setSelectedTab(index);
+        setIsOpenModel(false);
+    }
 
     return (
         <>
@@ -37,33 +48,15 @@ const CountryDropdown = () => {
                 </div>
 
                 <ul className='countryList mt-3'> 
-                    <li><Button onClick={()=>setIsOpenModel(false)}>India</Button></li>
-                    <li><Button onClick={()=>setIsOpenModel(false)}>Shri Lanka</Button></li>
-                    <li><Button onClick={()=>setIsOpenModel(false)}>Pakistan</Button></li>
-                    <li><Button onClick={()=>setIsOpenModel(false)}>India</Button></li>
-                    <li><Button onClick={()=>setIsOpenModel(false)}>Shri Lanka</Button></li>
-                    <li><Button onClick={()=>setIsOpenModel(false)}>Pakistan</Button></li>
-                    <li><Button onClick={()=>setIsOpenModel(false)}>India</Button></li>
-                    <li><Button onClick={()=>setIsOpenModel(false)}>Shri Lanka</Button></li>
-                    <li><Button onClick={()=>setIsOpenModel(false)}>Pakistan</Button></li>
-                    <li><Button onClick={()=>setIsOpenModel(false)}>India</Button></li>
-                    <li><Button onClick={()=>setIsOpenModel(false)}>Shri Lanka</Button></li>
-                    <li><Button onClick={()=>setIsOpenModel(false)}>Pakistan</Button></li>
-                    <li><Button onClick={()=>setIsOpenModel(false)}>India</Button></li>
-                    <li><Button onClick={()=>setIsOpenModel(false)}>Shri Lanka</Button></li>
-                    <li><Button onClick={()=>setIsOpenModel(false)}>Pakistan</Button></li>
-                    <li><Button onClick={()=>setIsOpenModel(false)}>India</Button></li>
-                    <li><Button onClick={()=>setIsOpenModel(false)}>Shri Lanka</Button></li>
-                    <li><Button onClick={()=>setIsOpenModel(false)}>Pakistan</Button></li>  
-                    <li><Button onClick={()=>setIsOpenModel(false)}>India</Button></li>
-                    <li><Button onClick={()=>setIsOpenModel(false)}>Shri Lanka</Button></li>
-                    <li><Button onClick={()=>setIsOpenModel(false)}>Pakistan</Button></li>
-                    <li><Button onClick={()=>setIsOpenModel(false)}>India</Button></li>
-                    <li><Button onClick={()=>setIsOpenModel(false)}>Shri Lanka</Button></li>
-                    <li><Button onClick={()=>setIsOpenModel(false)}>Pakistan</Button></li>
-                    <li><Button onClick={()=>setIsOpenModel(false)}>India</Button></li>
-                    <li><Button onClick={()=>setIsOpenModel(false)}>Shri Lanka</Button></li>
-                    <li><Button onClick={()=>setIsOpenModel(false)}>Pakistan</Button></li>
+                    {
+                        context.countryList.length !== 0 && context.countryList.map((item, index)=>{
+                            return(
+                                <li key={index}><Button onClick={()=>selectedCountry(index)} className={`${selectedTab === index ? 'active' : ''}`}>{item.country}</Button></li>
+                            )
+                        })
+                    }
+                    
+                    
                 </ul>
 
             </Dialog>

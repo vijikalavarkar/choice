@@ -65,6 +65,16 @@
     padding: 15px 20px;
 }
 
+.locationModel .countryList li button:hover{
+    background: #0c2c53;
+    color: white;
+}
+
+.locationModel .countryList li button.active{
+    background-color: #164376;
+    color: white;
+}
+
 .locationModel .close_{
     position: absolute;
     right: 25px;

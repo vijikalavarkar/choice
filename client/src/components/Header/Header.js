@@ -5,10 +5,15 @@ import CountryDropdown from '../CounrtyDropdown/CountryDropdown'
 import Searchbar from '../Searchbar/Searchbar'
 import Carting from '../Carting/Carting'
 import Navbar from '../Navbar/Navbar'
+import { useContext } from 'react'
+import { MyContext } from '../../App'
 
 
 
 const Header = () => {
+
+    const context = useContext(MyContext)
+
     return(
         <>
             <header className='header_wrapper'>
@@ -28,7 +33,12 @@ const Header = () => {
                             </div>
 
                             <div className="rightcontentWrapper d-flex align-items-center col-sm-10">
-                                <CountryDropdown />
+
+                                {
+                                    context.countryList.length !== 0 && <CountryDropdown />
+                                }
+
+                                
                                 <Searchbar />
                                 <Carting />
                             </div>
