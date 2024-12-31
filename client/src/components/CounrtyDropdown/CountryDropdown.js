@@ -1,7 +1,7 @@
 import Button from '@mui/material/Button';
 import "./CountryDropdown.css";
 import { FaAngleDown } from "react-icons/fa";
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { MdClose } from "react-icons/md";
 import Dialog from '@mui/material/Dialog';
 import { IoSearch } from "react-icons/io5";
@@ -18,11 +18,38 @@ const CountryDropdown = () => {
     // to know which contry selected
     const [selectedTab, setSelectedTab] = useState(null)
 
+    const [countryList, setCountryList] = useState([])
+
     const context = useContext(MyContext)
 
     const selectedCountry = (index) => {
         setSelectedTab(index);
         setIsOpenModel(false);
+    }
+
+    useEffect(()=>{
+        setCountryList(context.countryList);
+    },[])
+
+    const filterList = (e) => {
+        const keyword = e.target.value.toLowerCase();
+
+        if(keyword !== ""){
+
+            const list = countryList.filter((item)=>{
+                return item.country.toLowerCase().includes(keyword);
+            })
+            setCountryList(list);
+
+        }else{
+
+            setCountryList(context.countryList);
+            
+        }
+
+        
+
+        
     }
 
     return (
@@ -43,13 +70,13 @@ const CountryDropdown = () => {
                 <Button className='close_' onClick={()=>setIsOpenModel(false)}><MdClose /></Button>
 
                 <div className='headerSearch w-100'>
-                    <input type="text" placeholder='Search your area ...'/>
+                    <input type="text" placeholder='Search your area ...' onChange={filterList}/>
                     <Button><IoSearch /></Button>
                 </div>
 
                 <ul className='countryList mt-3'> 
                     {
-                        context.countryList.length !== 0 && context.countryList.map((item, index)=>{
+                        countryList?.length !== 0 && countryList?.map((item, index)=>{
                             return(
                                 <li key={index}><Button onClick={()=>selectedCountry(index)} className={`${selectedTab === index ? 'active' : ''}`}>{item.country}</Button></li>
                             )

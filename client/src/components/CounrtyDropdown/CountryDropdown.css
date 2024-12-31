@@ -66,12 +66,12 @@
 }
 
 .locationModel .countryList li button:hover{
-    background: #0c2c53;
-    color: white;
+    background: #f1f1f1;
+    color: black;
 }
 
 .locationModel .countryList li button.active{
-    background-color: #164376;
+    background-color: #164376;  
     color: white;
 }
 
