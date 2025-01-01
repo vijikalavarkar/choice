@@ -18,6 +18,8 @@ function App() {
   //get country list
   const [ countryList, setCountryList ] = useState([])
 
+  //for display selected country
+  const [ selectedTabCountry, SetSelectedTabCountry ] = useState('')
   
 
   useEffect(()=>{
@@ -33,6 +35,9 @@ function App() {
 
   const values = {
     countryList,
+    SetSelectedTabCountry,
+    selectedTabCountry
+
   }
 
   return (

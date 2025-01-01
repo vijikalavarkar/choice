@@ -46,12 +46,13 @@ const Header = () => {
                     </div>
                 </div>
 
+                {/* Navbar section */}
+                <Navbar />
 
             </header>
 
 
-            {/* Navbar section */}
-            <Navbar />
+            
 
             
 

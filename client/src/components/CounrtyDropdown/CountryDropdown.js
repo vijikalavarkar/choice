@@ -22,9 +22,10 @@ const CountryDropdown = () => {
 
     const context = useContext(MyContext)
 
-    const selectedCountry = (index) => {
+    const selectedCountry = (index, country) => {
         setSelectedTab(index);
         setIsOpenModel(false);
+        context.SetSelectedTabCountry(country)
     }
 
     useEffect(()=>{
@@ -57,7 +58,7 @@ const CountryDropdown = () => {
             <Button className="country_drop_down" onClick={()=>setIsOpenModel(true)}> 
                 <div className="info d-flex flex-column">
                     <span className='label'>Your Location</span>
-                    <span className='cname'>India</span>
+                    <span className='cname'>{context.selectedTabCountry !== "" ? context.selectedTabCountry.length>10 ? context.selectedTabCountry?.substr(0,10)+'...' : context.selectedTabCountry : 'Select Location'}</span>
                 </div>
                 <span className='ml-auto angle'><FaAngleDown /></span>
             </Button>
@@ -78,7 +79,7 @@ const CountryDropdown = () => {
                     {
                         countryList?.length !== 0 && countryList?.map((item, index)=>{
                             return(
-                                <li key={index}><Button onClick={()=>selectedCountry(index)} className={`${selectedTab === index ? 'active' : ''}`}>{item.country}</Button></li>
+                                <li key={index}><Button onClick={()=>selectedCountry(index, item.country)} className={`${selectedTab === index ? 'active' : ''}`}>{item.country}</Button></li>
                             )
                         })
                     }
