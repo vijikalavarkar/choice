@@ -28,6 +28,51 @@ nav .allCatTab .Cat_angle svg{
     font-size: 18px;
 }
 
+/* all categories css */
+nav .navpart1 .allcatWrapper{
+    position: relative;
+}
+
+nav .navpart1 .allcatWrapper .slidebarnav{
+    position: absolute;
+    top: 130%;
+    left: 0;
+    width: 89%;
+    height: 0px;
+    opacity: 0;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.1);
+    padding: 15px 0px !important;
+    transition: all 0.1s ease-in-out;
+    visibility: hidden;
+}
+
+nav .navpart1 .allcatWrapper .slidebarnav.open{
+    height: auto;
+    opacity: 1;
+    visibility: inherit;
+    
+}
+
+nav .navpart1 .allcatWrapper .slidebarnav ul li {
+    width: 100%;
+    list-style: none;
+    padding: 0px 15px !important;
+}
+
+nav .navpart1 .allcatWrapper .slidebarnav ul li button{
+    color: #000;
+    width: 100%;
+    justify-content: flex-start;
+    padding: 15px 8px;
+}
+
+nav .navpart1 .allcatWrapper .slidebarnav ul li button:hover{
+    background: #0c2c53;
+    color: #fff;
+
+}
+
 /* Navbar 2 css */
 nav .navpart2 ul{
     margin-bottom: 0px;
@@ -64,4 +109,44 @@ nav .navpart1{
 nav .navpart2{
     max-width: 80%;
     flex: 0 0 80%;
+}
+
+
+/* menu submenu css */
+nav .navpart2 ul li{
+    position: relative;
+    padding-bottom: 20px;
+}
+
+
+nav .navpart2 ul li .submenu{
+    position: absolute;
+    top: 150%;
+    left: 0;
+    width: 100%;
+    min-width: 200px !important;
+    background: #fff;
+    border-radius: 2px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.1s ease-in-out;
+}
+
+nav .navpart2 ul li .submenu a{
+    display: block;
+    width: 100%;
+}
+
+nav .navpart2 ul li .submenu a button{
+    width: 100%;
+    justify-content: flex-start;
+    text-transform: capitalize;
+    
+}
+
+nav .navpart2 ul li:hover .submenu{
+    opacity: 1;
+    visibility: inherit;
+    top: 100%;
+    
 }
