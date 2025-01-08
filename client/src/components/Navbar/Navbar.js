@@ -7,7 +7,7 @@ import { useState } from 'react';
 
 const Navbar = () => {
 
-    const [isopenSlidebarvalue, setisopenSlidebarvalue ] = useState(true)
+    const [isopenSlidebarvalue, setisopenSlidebarvalue ] = useState(false)
 
     
 

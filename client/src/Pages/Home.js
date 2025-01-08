@@ -1,7 +1,12 @@
+import HomeBanner from "../components/HomeBanner/HomeBanner"
+
+
 const Home = () => {
-    return(
+    return (
         <>
-            <h3>Its a Home page</h3>
+
+            <HomeBanner />
+
         </>
     )
 }

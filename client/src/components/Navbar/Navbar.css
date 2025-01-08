@@ -45,6 +45,7 @@ nav .navpart1 .allcatWrapper .slidebarnav{
     padding: 15px 0px !important;
     transition: all 0.1s ease-in-out;
     visibility: hidden;
+    z-index: 100;
 }
 
 nav .navpart1 .allcatWrapper .slidebarnav.open{
@@ -130,6 +131,7 @@ nav .navpart2 ul li .submenu{
     opacity: 0;
     visibility: hidden;
     transition: all 0.1s ease-in-out;
+    z-index: 100;
 }
 
 nav .navpart2 ul li .submenu a{

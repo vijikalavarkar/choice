@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-//import Home from './Pages/Home';
+import Home from './Pages/Home';
 import Header from './components/Header/Header';
 import { createContext, useEffect, useState } from 'react';
 //import Footer from './components/Footer/Footer';
@@ -48,7 +48,7 @@ function App() {
           <Header />
 
           <Routes>
-            <Route path="/" exact={true} element={""} />
+            <Route path="/" exact={true} element={<Home />} />
           </Routes>
 
           {/* <Footer /> */}
